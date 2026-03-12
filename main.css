@@ -1,0 +1,18 @@
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5px;
+  border: 1px solid #2B2C28;
+  background: #131515;
+}
+
+.board_slot:hover {
+  background: #194D46;
+  transform: translateY(-1px);
+}
+
+.board_slot {
+  padding: 10px;
+  border: 1px solid #0F2E2A;
+  text-align: center;
+}
