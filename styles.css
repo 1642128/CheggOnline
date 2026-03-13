@@ -12,7 +12,7 @@
 
   /* tweak these two to taste */
   --cell-w: 48px;
-  --cell-h: 28px; /* smaller => skinnier vertically */
+  --cell-h: 48px; /* smaller => skinnier vertically */
 }
 
 .board_slot {
