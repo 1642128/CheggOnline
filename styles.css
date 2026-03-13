@@ -1,64 +1,27 @@
 .board {
+  --cell-w: 48px;
+  --cell-h: 28px;
+
   display: grid;
   grid-template-columns: repeat(8, var(--cell-w));
   grid-template-rows: repeat(10, var(--cell-h));
   gap: 1px;
   padding: 1px;
+
   width: fit-content;
-  margin: 0 auto;
+  margin: 40px auto;
 
   border: 1px solid #2B2C28;
   background: #131515;
-
-  /* tweak these two to taste */
-  --cell-w: 48px;
-  --cell-h: 48px; /* smaller => skinnier vertically */
 }
 
-.board_slot {
+.board_slot, .board_slot_team1, .board_slot_team2 {
   width: var(--cell-w);
   height: var(--cell-h);
   box-sizing: border-box;
-
   border: 1px solid #0F2E2A;
-  background: #0e1111;
-  display: grid;
-  place-items: center;
 }
 
-.board_slot:hover {
-  background: #194D46;
-  transform: translateY(-1px);
-}
-
-.board_slot_team1 {
-  width: var(--cell-w);
-  height: var(--cell-h);
-  box-sizing: border-box;
-
-  border: 1px solid #0F2E2A;
-  background: #4400b3;
-  display: grid;
-  place-items: center;
-}
-
-.board_slot_team1:hover {
-  background: #759EB8;
-  transform: translateY(-1px);
-}
-
-.board_slot_team2 {
-  width: var(--cell-w);
-  height: var(--cell-h);
-  box-sizing: border-box;
-
-  border: 1px solid #0F2E2A;
-  background: #A82431;
-  display: grid;
-  place-items: center;
-}
-
-.board_slot_team2:hover {
-  background: #D43545;
-  transform: translateY(-1px);
-}
+.board_slot { background: #0e1111; }
+.board_slot_team1 { background: #4400b3; }
+.board_slot_team2 { background: #A82431; }
