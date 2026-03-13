@@ -1,12 +1,29 @@
 .board {
   display: grid;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0.5px;
+  grid-template-columns: repeat(8, var(--cell-w));
+  grid-template-rows: repeat(10, var(--cell-h));
+  gap: 1px;
+  padding: 1px;
+  width: fit-content;
+  margin: 0 auto;
+
   border: 1px solid #2B2C28;
   background: #131515;
+
+  /* tweak these two to taste */
+  --cell-w: 48px;
+  --cell-h: 28px; /* smaller => skinnier vertically */
+}
+
+.board_slot {
+  width: var(--cell-w);
+  height: var(--cell-h);
+  box-sizing: border-box;
+
+  border: 1px solid #0F2E2A;
+  background: #0e1111;
+  display: grid;
+  place-items: center;
 }
 
 .board_slot:hover {
@@ -14,8 +31,34 @@
   transform: translateY(-1px);
 }
 
-.board_slot {
-  padding: 10px;
+.board_slot_team1 {
+  width: var(--cell-w);
+  height: var(--cell-h);
+  box-sizing: border-box;
+
   border: 1px solid #0F2E2A;
-  text-align: center;
+  background: #4400b3;
+  display: grid;
+  place-items: center;
+}
+
+.board_slot_team1:hover {
+  background: #759EB8;
+  transform: translateY(-1px);
+}
+
+.board_slot_team2 {
+  width: var(--cell-w);
+  height: var(--cell-h);
+  box-sizing: border-box;
+
+  border: 1px solid #0F2E2A;
+  background: #A82431;
+  display: grid;
+  place-items: center;
+}
+
+.board_slot_team2:hover {
+  background: #D43545;
+  transform: translateY(-1px);
 }
