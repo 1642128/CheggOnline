@@ -5,11 +5,12 @@ const rows = 10;
 
 for (let i = 0; i < cols * rows; i++) {
   const cell = document.createElement("div");
-  
   const r = Math.floor(i / cols);
-  if (r < 2) cell.className = "board_slot_team1";
-  else if (r >= rows - 2) cell.className = "board_slot_team2";
-  else cell.className = "board_slot";
+
+  cell.className =
+    r < 2 ? "board_slot_team1"
+    : r >= rows - 2 ? "board_slot_team2"
+    : "board_slot";
 
   board.appendChild(cell);
 }
